@@ -2,7 +2,7 @@
 const S = {
   windows: [], nextZ: 100, focusedId: null,
   theme: localStorage.getItem('fo-theme') || 'dark',
-  accent: localStorage.getItem('fo-accent') || '#a78bfa',
+  accent: localStorage.getItem('fo-accent') || '#8b5cf6',
   dockSize: parseInt(localStorage.getItem('fo-docksize')) || 42,
   notes: JSON.parse(localStorage.getItem('fo-notes') || '[]'),
   calEvents: JSON.parse(localStorage.getItem('fo-events') || '{}'),
@@ -516,16 +516,16 @@ const renderCalculator = (body, winId) => {
 };
 const renderSettings = (body, winId) => {
   const wallpapers = [
-    {name:'Cosmos',grad:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)'},
-    {name:'Sunset',grad:'linear-gradient(135deg,#f093fb,#f5576c)'},
-    {name:'Ocean',grad:'linear-gradient(135deg,#667eea,#764ba2)'},
-    {name:'Forest',grad:'linear-gradient(135deg,#134e5e,#71b280)'},
-    {name:'Lavender',grad:'linear-gradient(135deg,#a18cd1,#fbc2eb)'},
-    {name:'Ember',grad:'linear-gradient(135deg,#f12711,#f5af19)'},
-    {name:'Midnight',grad:'linear-gradient(135deg,#232526,#414345)'},
-    {name:'Peach',grad:'linear-gradient(135deg,#ffecd2,#fcb69f)'}
+    {name:'Obsidian Mesh',grad:'radial-gradient(circle at 20% 20%, #1e1538 0%, transparent 50%), radial-gradient(circle at 80% 80%, #0d1e3a 0%, transparent 50%), linear-gradient(135deg, #090a12 0%, #111422 45%, #0d0f1a 100%)'},
+    {name:'Cyber Dusk',grad:'linear-gradient(135deg, #0f172a 0%, #311042 50%, #030712 100%)'},
+    {name:'Aurora Glow',grad:'linear-gradient(135deg, #064e3b 0%, #022c22 40%, #0f172a 100%)'},
+    {name:'Hyper Violet',grad:'linear-gradient(135deg, #4c1d95 0%, #1e1b4b 60%, #09090b 100%)'},
+    {name:'Sunset Horizon',grad:'linear-gradient(135deg, #831843 0%, #431407 50%, #0f172a 100%)'},
+    {name:'Deep Oceanic',grad:'linear-gradient(135deg, #0c4a6e 0%, #082f49 50%, #020617 100%)'},
+    {name:'Midnight Titanium',grad:'linear-gradient(135deg, #18181b 0%, #27272a 50%, #09090b 100%)'},
+    {name:'Clean Daylight',grad:'linear-gradient(135deg, #e2e8f0 0%, #e0e7ff 50%, #f1f5f9 100%)'}
   ];
-  const accents = ['#a78bfa','#6366f1','#3b82f6','#10b981','#f59e0b','#ef4444','#ec4899','#6b7280'];
+  const accents = ['#8b5cf6','#6366f1','#06b6d4','#10b981','#f59e0b','#f43f5e','#ec4899','#64748b'];
   body.innerHTML='<div class="settings-app"><div class="settings-sidebar"><div class="settings-nav-item active" data-section="appearance">🎨 Appearance</div><div class="settings-nav-item" data-section="wallpaper">🖼 Wallpaper</div><div class="settings-nav-item" data-section="dock">📌 Dock</div><div class="settings-nav-item" data-section="about">ℹ️ About</div></div><div class="settings-content" id="sc-'+winId+'"></div></div>';
   const content=body.querySelector('#sc-'+winId);
   const sections={
