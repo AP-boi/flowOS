@@ -1,0 +1,5 @@
+.freebuff/
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
