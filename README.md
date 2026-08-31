@@ -1,6 +1,6 @@
-# flowOS 🚀
+# flowOS 🚀 (Black & Matrix Green Edition)
 
-A modern, fast, and feature-rich Web Desktop Operating System built with pure Vanilla HTML5, CSS3, and JavaScript. Designed with a sleek, responsive interface for developers, power users, and crypto enthusiasts.
+A modern, fast, and feature-rich Web Desktop Operating System built with pure Vanilla HTML5, CSS3, and JavaScript. Designed with a sleek obsidian and neon matrix green glassmorphic interface for developers, power users, and crypto enthusiasts.
 
 ---
 

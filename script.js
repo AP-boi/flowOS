@@ -2,7 +2,7 @@
 const S = {
   windows: [], nextZ: 100, focusedId: null,
   theme: localStorage.getItem('fo-theme') || 'dark',
-  accent: localStorage.getItem('fo-accent') || '#8b5cf6',
+  accent: localStorage.getItem('fo-accent') || '#10b981',
   dockSize: parseInt(localStorage.getItem('fo-docksize')) || 42,
   notes: JSON.parse(localStorage.getItem('fo-notes') || '[]'),
   calEvents: JSON.parse(localStorage.getItem('fo-events') || '{}'),
@@ -516,23 +516,23 @@ const renderCalculator = (body, winId) => {
 };
 const renderSettings = (body, winId) => {
   const wallpapers = [
-    {name:'Obsidian Mesh',grad:'radial-gradient(circle at 20% 20%, #1e1538 0%, transparent 50%), radial-gradient(circle at 80% 80%, #0d1e3a 0%, transparent 50%), linear-gradient(135deg, #090a12 0%, #111422 45%, #0d0f1a 100%)'},
-    {name:'Cyber Dusk',grad:'linear-gradient(135deg, #0f172a 0%, #311042 50%, #030712 100%)'},
-    {name:'Aurora Glow',grad:'linear-gradient(135deg, #064e3b 0%, #022c22 40%, #0f172a 100%)'},
-    {name:'Hyper Violet',grad:'linear-gradient(135deg, #4c1d95 0%, #1e1b4b 60%, #09090b 100%)'},
-    {name:'Sunset Horizon',grad:'linear-gradient(135deg, #831843 0%, #431407 50%, #0f172a 100%)'},
-    {name:'Deep Oceanic',grad:'linear-gradient(135deg, #0c4a6e 0%, #082f49 50%, #020617 100%)'},
-    {name:'Midnight Titanium',grad:'linear-gradient(135deg, #18181b 0%, #27272a 50%, #09090b 100%)'},
-    {name:'Clean Daylight',grad:'linear-gradient(135deg, #e2e8f0 0%, #e0e7ff 50%, #f1f5f9 100%)'}
+    {name:'Matrix Mesh',grad:'radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 45%), radial-gradient(circle at 85% 80%, rgba(5, 150, 105, 0.16) 0%, transparent 50%), linear-gradient(135deg, #030604 0%, #07120a 50%, #020503 100%)'},
+    {name:'Cyber Emerald',grad:'linear-gradient(135deg, #064e3b 0%, #022c22 45%, #020403 100%)'},
+    {name:'Neon Pulse',grad:'radial-gradient(circle at 50% 50%, rgba(0, 255, 102, 0.12) 0%, transparent 60%), linear-gradient(135deg, #040805 0%, #08160c 60%, #010302 100%)'},
+    {name:'Midnight Obsidian',grad:'linear-gradient(135deg, #090b0a 0%, #121714 50%, #040504 100%)'},
+    {name:'Deep Terminal',grad:'linear-gradient(135deg, #022c22 0%, #064e3b 40%, #0a0f0d 100%)'},
+    {name:'Hacker Green',grad:'linear-gradient(135deg, #052e16 0%, #14532d 50%, #020603 100%)'},
+    {name:'Dark Carbon',grad:'linear-gradient(135deg, #111413 0%, #1c221f 50%, #080a09 100%)'},
+    {name:'Mint Daylight',grad:'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #f0fdf4 100%)'}
   ];
-  const accents = ['#8b5cf6','#6366f1','#06b6d4','#10b981','#f59e0b','#f43f5e','#ec4899','#64748b'];
+  const accents = ['#10b981','#00ff66','#34d399','#059669','#06b6d4','#3b82f6','#f59e0b','#ec4899'];
   body.innerHTML='<div class="settings-app"><div class="settings-sidebar"><div class="settings-nav-item active" data-section="appearance">🎨 Appearance</div><div class="settings-nav-item" data-section="wallpaper">🖼 Wallpaper</div><div class="settings-nav-item" data-section="dock">📌 Dock</div><div class="settings-nav-item" data-section="about">ℹ️ About</div></div><div class="settings-content" id="sc-'+winId+'"></div></div>';
   const content=body.querySelector('#sc-'+winId);
   const sections={
     appearance:'<h2>Appearance</h2><div class="settings-group"><h3>Theme</h3><div class="settings-row"><label>Dark Mode</label><div class="toggle-switch '+(S.theme==='dark'?'on':'')+'" id="themeToggle"></div></div></div><div class="settings-group"><h3>Accent Color</h3><div class="accent-colors">'+accents.map(c=>'<div class="accent-color '+(S.accent===c?'active':'')+'" style="background:'+c+'" data-color="'+c+'"></div>').join('')+'</div></div>',
     wallpaper:'<h2>Wallpaper</h2><div class="wallpaper-grid">'+wallpapers.map((w,i)=>'<div class="wallpaper-option '+(i===0?'active':'')+'" style="background:'+w.grad+'" title="'+w.name+'" data-idx="'+i+'"></div>').join('')+'</div>',
     dock:'<h2>Dock</h2><div class="settings-group"><h3>Icon Size</h3><div class="settings-row"><label>Size: '+S.dockSize+'px</label><input type="range" class="settings-slider" id="dockSlider" min="28" max="64" value="'+S.dockSize+'"></div></div>',
-    about:'<h2>About flowOS</h2><div style="text-align:center;padding:40px 0"><svg viewBox="0 0 80 80" width="80" height="80"><defs><linearGradient id="ag" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6366f1"/></linearGradient></defs><rect rx="18" width="80" height="80" fill="url(#ag)"/><text x="40" y="54" text-anchor="middle" fill="white" font-size="36" font-weight="700">f</text></svg><h3 style="margin-top:16px;color:var(--text)">flowOS</h3><p style="color:var(--text-secondary);font-size:13px">Version 1.0.0</p><p style="color:var(--text-muted);font-size:12px;margin-top:8px">A web-based desktop environment</p></div>'
+    about:'<h2>About flowOS</h2><div style="text-align:center;padding:40px 0"><svg viewBox="0 0 80 80" width="80" height="80"><defs><linearGradient id="ag" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><rect rx="18" width="80" height="80" fill="url(#ag)"/><text x="40" y="54" text-anchor="middle" fill="#040605" font-size="36" font-weight="700">f</text></svg><h3 style="margin-top:16px;color:var(--text)">flowOS</h3><p style="color:var(--text-secondary);font-size:13px">Version 1.0.0 (Black & Green Edition)</p><p style="color:var(--text-muted);font-size:12px;margin-top:8px">A cyber web-based desktop environment</p></div>'
   };
   content.innerHTML=sections.appearance;
   body.querySelectorAll('.settings-nav-item').forEach(n=>n.onclick=()=>{

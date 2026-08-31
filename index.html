@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FlowOS — Modern Web Desktop</title>
+  <title>flowOS — Black & Green Cyber Edition</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Bootloader Screen -->
+  <!-- Cyber Bootloader Screen -->
   <div id="boot-screen">
     <div class="boot-content">
       <div class="boot-logo">
         <svg viewBox="0 0 80 80" width="80" height="80">
           <defs>
             <linearGradient id="bootGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#8b5cf6"/>
-              <stop offset="100%" stop-color="#6366f1"/>
+              <stop offset="0%" stop-color="#00ff66"/>
+              <stop offset="100%" stop-color="#059669"/>
             </linearGradient>
           </defs>
           <rect rx="22" width="80" height="80" fill="url(#bootGrad)"/>
-          <text x="40" y="54" text-anchor="middle" fill="white" font-size="38" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">f</text>
+          <text x="40" y="54" text-anchor="middle" fill="#030504" font-size="38" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">f</text>
         </svg>
       </div>
       <div class="boot-progress">
@@ -50,7 +50,7 @@
         <div class="menu-app-icon" id="menu-apple">
           <svg viewBox="0 0 18 18" width="16" height="16">
             <rect rx="4" width="18" height="18" fill="var(--accent)"/>
-            <text x="9" y="13.5" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="sans-serif">f</text>
+            <text x="9" y="13.5" text-anchor="middle" fill="#030504" font-size="13" font-weight="700" font-family="sans-serif">f</text>
           </svg>
         </div>
         <span class="menu-app-name" id="menu-active-app">flowOS</span>
@@ -80,7 +80,7 @@
         <div class="menu-icon" id="btn-battery" title="Battery">
           <svg width="18" height="13" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="1" y="2" width="22" height="12" rx="2"/>
-            <rect x="3" y="4" width="16" height="8" rx="1" fill="currentColor" opacity="0.7"/>
+            <rect x="3" y="4" width="16" height="8" rx="1" fill="currentColor" opacity="0.8"/>
             <path d="M25 6v4" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
@@ -114,7 +114,7 @@
             <circle cx="11" cy="11" r="8"/>
             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
-          <input type="text" id="spotlight-input" placeholder="Search apps, files, and commands..." autocomplete="off" spellcheck="false">
+          <input type="text" id="spotlight-input" placeholder="Search apps, files, commands..." autocomplete="off" spellcheck="false">
         </div>
         <div id="spotlight-results"></div>
       </div>
